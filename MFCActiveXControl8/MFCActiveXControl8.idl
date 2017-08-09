@@ -1,0 +1,52 @@
+// MFCActiveXControl8.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(MFCActiveXControl8.tlb)，该类型库将成为
+// MFCActiveXControl8.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(D1C28972-C6F6-4FC1-81C7-F1B7451F2AF0), version(1.0),
+  control ]
+library MFCActiveXControl8Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  CMFCActiveXControl8Ctrl 的主调度接口
+	[ 
+		uuid(2D08B71E-85AE-4FCC-A46F-51C884C71199)	
+	]
+	dispinterface _DMFCActiveXControl8
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] BSTR regTest(IDispatch* hahaha);
+	};
+
+	//  CMFCActiveXControl8Ctrl 的事件调度接口
+
+	[ 
+		uuid(8A3EF148-1A37-4CD0-AB8A-13B044EB1CE5)	
+	]
+	dispinterface _DMFCActiveXControl8Events
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CMFCActiveXControl8Ctrl 的类信息
+	[
+		uuid(F9EE5891-3EFB-470B-B949-B850F07ADBCA)
+	]
+	coclass MFCActiveXControl8
+	{
+		[default] dispinterface _DMFCActiveXControl8;
+		[default, source] dispinterface _DMFCActiveXControl8Events;
+	};
+
+};
